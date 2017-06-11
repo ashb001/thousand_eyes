@@ -24,4 +24,4 @@ curl http://localhost:8080/messages?search=consequat --user superman:superman
 
 ##### Retrieve a list of all users, paired with their most "popular" follower
 
-curl http://localhost:8080/popularFollowers --user zod:zod
+curl http://localhost:8080/popularFollowers --user superman:superman
