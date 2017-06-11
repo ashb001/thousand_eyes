@@ -14,7 +14,7 @@ curl http://localhost:8080/following --user superman:superman
 
 curl http://localhost:8080/follow/catwoman --user superman:superman
 
-##### Start unfollowing catwoman
+##### Unfollow catwoman
 
 curl http://localhost:8080/unfollow/catwoman --user superman:superman
 
