@@ -1,5 +1,11 @@
 ### Mini Twitter
 
+##### Instructions to clone, build and start the server (Required Gradle and Java 8+)
+
+- git clone git@github.com:ashb001/thousand_eyes.git
+- cd thousand_eyes/challenge
+- ./gradlew build && java -jar build/libs/challenge-0.0.1-SNAPSHOT.jar
+
 ##### Example usage (Note: The password of each user is the same as their username) 
 
 ##### Get the list of superman's followers
