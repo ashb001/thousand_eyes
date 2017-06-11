@@ -1,4 +1,4 @@
-## Mini Twitter
+### Mini Twitter
 
 ##### Example usage (Note: The password of each user is the same as their username) 
 
