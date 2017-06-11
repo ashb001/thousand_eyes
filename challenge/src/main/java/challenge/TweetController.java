@@ -29,12 +29,14 @@ public class TweetController {
     @Autowired
     private TweetDao tweetDao;
 
-    /** Returns a list of all users, paired with their most "popular" follower **/
+    /** Returns a list of all users, paired with their most "popular" follower, ordered by person_id **/
     @RequestMapping(method = RequestMethod.GET, value = "/popularFollowers")    
     public List<Map<String, String>> popularFollowers() {
         return tweetDao.mostPopularFollowersReport();
     }
     
+    /** Gets messages the user sent, plus the messages sent by users they follow **/
+    /** The (optional) search param does a case-insensitive search thru messages **/
     @RequestMapping(method = RequestMethod.GET, value = "/messages")    
     public List<Message> relatedMessagesOfCurrentUser(HttpServletRequest request, 
             @RequestParam("search") Optional<String> keyword) {
@@ -42,18 +44,21 @@ public class TweetController {
         return tweetDao.relatedMessagesOf(currentUser, keyword);
     }
 
+    /** Gets the list of followers for the user **/
     @RequestMapping(method = RequestMethod.GET, value = "/followers")    
     public List<Person> followersOfCurrentUser(HttpServletRequest request) {
         String currentUser = getUsernameFromAuthHeader(request);
         return tweetDao.followersOf(currentUser);
     }
 
+    /** Gets the list of people that the user is currently following **/
     @RequestMapping(method = RequestMethod.GET, value = "/following")
     public List<Person> followedByCurrentUser(HttpServletRequest request) {
         String currentUser = getUsernameFromAuthHeader(request);
         return tweetDao.followedBy(currentUser);
     }
 
+    /** Follows a user, and echoes the entire list of people that the user is now following **/
     @RequestMapping("/follow/{userhandle}")
     public List<Person> followUser(HttpServletRequest request, @PathVariable String userhandle) throws Exception {
         String currentUser = getUsernameFromAuthHeader(request);
@@ -61,6 +66,7 @@ public class TweetController {
         return tweetDao.followedBy(currentUser);
     }
     
+    /** Unfollows a user, and echoes the entire list of people that the user is now following **/
     @RequestMapping("/unfollow/{userhandle}")
     public List<Person> unfollowUser(HttpServletRequest request, @PathVariable String userhandle) throws Exception {
         String currentUser = getUsernameFromAuthHeader(request);
