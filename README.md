@@ -2,7 +2,7 @@
 Mini Twitter
 
 
-# Example usage (Note: The password of each user is the same as their username) 
+- Example usage (Note: The password of each user is the same as their username) 
 
 - Get the list of superman's followers
 
