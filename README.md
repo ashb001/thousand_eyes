@@ -1,6 +1,6 @@
 ### Mini Twitter
 
-##### Instructions to clone, build and start the server (Required Gradle and Java 8+)
+##### Instructions to clone, build and start the server (Requires Gradle 3.x and Java 8+)
 
 - git clone git@github.com:ashb001/thousand_eyes.git
 - cd thousand_eyes/challenge
