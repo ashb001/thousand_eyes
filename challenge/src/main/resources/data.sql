@@ -227,3 +227,30 @@ VALUES
     (5, 7),
     (2, 1),
     (10, 9);
+    
+INSERT INTO users(username,password,enabled)
+VALUES
+    ('batman', '$2a$10$CxrktLDRKKzaJZJv5LrQD.xZAjJXmJM8QYschCUwux3sL/Dxd2AOS', true),
+    ('superman', '$2a$10$/FrMUs1IwayWanUdHhs2YeMaBlNwoVVfrbGg9Mj6C8EFwZB3d38wq', true),
+    ('catwoman', '$2a$10$skhHcwdj2vW/6tEHvUKmfOfSbs.RjtTq8Pu46NEzw3c5B4QZo7Y5.', true),
+    ('daredevil', '$2a$10$DqjtgHpG/PcePPnlwc4mx.JfxbyXKmC0jjiG6yB.tQb.wru4aXC/G', true),
+    ('alfred', '$2a$10$uIJP2otDwjo16Y6QYGPYRuxa7CPTY7QnJaStmqL0WafR0TB8WEqoO', true),
+    ('dococ', '$2a$10$u/GOFQCuCx728lH9okF.9OawEPK4uuhXMAeQQqFBLgpljWfvjiX4e', true),
+    ('zod', '$2a$10$8y3KSAMQWT8mPEH/wiTqLeT29w4vnG2RCAgwGQGjJ1EL1E2y4wmXG', true),
+    ('spiderman', '$2a$10$D0ZLhimywXEzFaKxxRvvAOzZ4cWMPN9OdNXBB3TGnHjBLBRXgAUe2', true),
+    ('ironman', '$2a$10$bqx3jvvrovADL/ocPyCEfe.dhWDsagQ7ex7OMATRuTZbAjbMjcMra', true),
+    ('profx', '$2a$10$mFw6xlrW0t2pLPAnYc73le1HlKeXZxfJPXMULyf8D0Tgub2YJ9acO', true);
+
+INSERT INTO user_roles (username, role)
+VALUES 
+    ('batman', 'ROLE_USER'),
+    ('superman', 'ROLE_USER'),
+    ('catwoman', 'ROLE_USER'),
+    ('daredevil', 'ROLE_USER'),
+    ('alfred', 'ROLE_USER'),
+    ('dococ', 'ROLE_USER'),
+    ('zod', 'ROLE_USER'),
+    ('spiderman', 'ROLE_USER'),
+    ('ironman', 'ROLE_USER'),
+    ('profx', 'ROLE_USER');
+    
